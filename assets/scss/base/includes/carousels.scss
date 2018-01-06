@@ -1,0 +1,93 @@
+/// dctb-sass
+/// Sass Boilerplate to start new project with some functionalities.
+/// @author Diogo Cezar <diogo@diogocezar.com>
+
+// Carousels
+// Set the project carousels here
+
+.carousel-default{
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+.owl-carousel{
+	.owl-nav{
+		position: absolute;
+		top: calc(50% - 25px);
+		margin: 0px;
+		width: 100%;
+		.owl-prev{
+			background: none;
+			padding: 0px;
+			border-radius: 0px;
+			float: left;
+			&:hover{
+				background-color:transparent;
+			}
+			.arrow-prev{
+				height: 50px;
+				width: 50px;
+				position: relative;
+				float: left;
+				background-image: url("../../../images/arrow-prev.svg");
+				margin-left: -30px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					margin-right: 0px;
+				}
+				&:hover{
+					@include scale(0.9);
+				}
+			}
+		}
+		.owl-next{
+			background: none;
+			padding: 0px;
+			border-radius: 0px;
+			float: right;
+			&:hover{
+				background-color:transparent;
+			}
+			.arrow-next{
+				height: 50px;
+				width: 50px;
+				position: relative;
+				float: left;
+				background-image: url("../../../images/arrow-next.svg");
+				margin-right: -30px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					margin-right: 0px;
+				}
+				&:hover{
+					@include scale(0.9);
+				}
+			}
+		}
+	}
+	.owl-dots{
+		margin-top: 1em;
+		.owl-dot{
+			span{
+				width: 15px;
+				height: 15px;
+				@include transition(0.15s);
+				@include responsive(s2){
+					width: 10px;
+					height: 10px;
+				}
+			}
+			&.active{
+				span{
+					background: $color-black;
+				}
+			}
+			&:hover{
+				span{
+					background: $color-black;
+				}
+			}
+		}
+	}
+}

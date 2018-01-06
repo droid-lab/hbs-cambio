@@ -1,0 +1,192 @@
+.carousel-default {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: calc(50% - 25px);
+  margin: 0px;
+  width: 100%; }
+  .owl-carousel .owl-nav .owl-prev {
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    float: left; }
+    .owl-carousel .owl-nav .owl-prev:hover {
+      background-color: transparent; }
+    .owl-carousel .owl-nav .owl-prev .arrow-prev {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      float: left;
+      background-image: url("../../../images/arrow-prev.svg");
+      margin-left: -30px;
+      -webkit-transition: all 0.15s ease-in-out 0s;
+      -moz-transform: all 0.15s ease-in-out 0s;
+      -ms-transition: all 0.15s ease-in-out 0s;
+      transition: all 0.15s ease-in-out 0s; }
+      @media only screen and (max-width: 992px) {
+        .owl-carousel .owl-nav .owl-prev .arrow-prev {
+          margin-right: 0px; } }
+      .owl-carousel .owl-nav .owl-prev .arrow-prev:hover {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9); }
+  .owl-carousel .owl-nav .owl-next {
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+    float: right; }
+    .owl-carousel .owl-nav .owl-next:hover {
+      background-color: transparent; }
+    .owl-carousel .owl-nav .owl-next .arrow-next {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      float: left;
+      background-image: url("../../../images/arrow-next.svg");
+      margin-right: -30px;
+      -webkit-transition: all 0.15s ease-in-out 0s;
+      -moz-transform: all 0.15s ease-in-out 0s;
+      -ms-transition: all 0.15s ease-in-out 0s;
+      transition: all 0.15s ease-in-out 0s; }
+      @media only screen and (max-width: 992px) {
+        .owl-carousel .owl-nav .owl-next .arrow-next {
+          margin-right: 0px; } }
+      .owl-carousel .owl-nav .owl-next .arrow-next:hover {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9); }
+
+.owl-carousel .owl-dots {
+  margin-top: 1em; }
+  .owl-carousel .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transform: all 0.15s ease-in-out 0s;
+    -ms-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s; }
+    @media only screen and (max-width: 992px) {
+      .owl-carousel .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px; } }
+  .owl-carousel .owl-dots .owl-dot.active span {
+    background: #000; }
+  .owl-carousel .owl-dots .owl-dot:hover span {
+    background: #000; }
+
+* {
+  outline: none; }
+
+body {
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  color: #000; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+input, textarea, select {
+  -webkit-appearance: none;
+  border-radius: 0px; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    color: #000;
+    text-decoration: none; }
+  a:focus {
+    color: #000;
+    text-decoration: none; }
+  a:active {
+    color: #000;
+    text-decoration: none; }
+  a:visited {
+    color: #000;
+    text-decoration: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: #000; }
+
+::selection {
+  color: #fff;
+  background: #000; }
+
+h1, h2, h3, h4 {
+  font-family: "Arial", sans-serif;
+  color: #000; }
+
+h1 {
+  font-size: 4.8em;
+  font-weight: 600; }
+
+h2 {
+  font-size: 3.8em;
+  font-weight: 600; }
+
+h3 {
+  font-size: 2.8em;
+  font-weight: 600; }
+
+h4 {
+  font-size: 1.8em;
+  font-weight: 600; }
+
+p {
+  font-size: 1em; }
+
+.center {
+  text-align: center; }
+
+.img-center {
+  margin: 0 auto; }
+
+.no-margin {
+  margin: 0px; }
+
+.no-padding {
+  padding: 0px; }
+
+.clear {
+  clear: both; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.preload-img {
+  z-index: 99999;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .preload-img img {
+    height: 200px;
+    width: 295px; }
