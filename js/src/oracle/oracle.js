@@ -177,7 +177,7 @@ Oracle = {
 			scrollspeed        : 100,
 			mousescrollstep    : 60,
 			cursoropacitymax   : 0.8,
-			cursorcolor        : "#fff",
+			cursorcolor        : "#000",
 			horizrailenabled   : false,
 			cursorborder       : "none",
 			cursorborderradius : "0px"
@@ -188,7 +188,7 @@ Oracle = {
 		}
 	},
 	Preloader: {
-		loaded : true,
+		loaded : false,
 		config : {
 			delay    : 500,
 			recheck  : 1500,

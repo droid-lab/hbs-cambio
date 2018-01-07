@@ -10,6 +10,138 @@
 @import '../base/includes/colors.scss';
 @import '../base/includes/fonts.scss';
 
-body{
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
+body{
+	@include responsive(s2){
+		font-size: 12px;
+	}
+	@include responsive(s3){
+		font-size: 11px;
+	}
+	@include responsive(s4){
+		font-size: 10px;
+	}
+}
+
+// Default Button
+.button{
+	height: 70px;
+	width: 200px;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	background-color: transparent;
+	border: 2px solid $color-white;
+	color: $color-white;
+	padding: 0px;
+	font-size: 1.1em;
+	@include transition(0.25s);
+	&:hover{
+		background-color: $color-white;
+		color: $color-yellow;
+	}
+	@include responsive(s2){
+		height: 60px;
+		width: 180px;
+		margin-left: 50%;
+		-webkit-transform: translatex(-90px)!important;
+		-moz-transform: translatex(-90px)!important;
+		-ms-transform: translatex(-90px)!important;
+		transform: translatex(-90px)!important;
+	}
+}
+
+//Default Background
+.bgs{
+	position: relative;
+	float: left;
+	width: 100%;
+	background-position: top center;
+	background-size: cover;
+}
+
+// Default Titles Styles
+.title-big-white{
+	font-family: $font-secondary;
+	font-size: 3.2em;
+	color: $color-white;
+}
+
+.p-yellow-light{
+	font-family: $font-primary;
+	color: $color-yellow-light-p;
+	font-size: 1.2em;
+}
+
+// Diagonal Section
+.diagonal-bottom:after{
+    position: absolute;
+    content: '';
+    border-style: solid;
+    border-width: 0 0 10em 100vw;
+    border-color: transparent #ffffff #ffffff transparent;
+    bottom: 0;
+	@include responsive(s2){
+		display: none!important;
+	}
+}
+
+// Sections
+#home{
+  background:
+    linear-gradient(
+      rgba(190, 155, 71, 0.84),
+      rgba(190, 155, 71, 0.84)
+    ),
+    url('../../../images/hbs-cambio-bg-home.jpg');
+	height: 942px;
+	@include responsive(s2){
+		height: auto;
+	}
+	@extend .bgs;
+	.decoration{
+		position: absolute;
+		height: 300px;
+		width: 300px;
+		left: 55%;
+		top: 33%;
+		@include opacity(0.9)
+		background-image: url('../../../images/hbs-cambio-decoration-logo.svg');
+		background-repeat: no-repeat;
+		@include responsive(s2){
+			display: none!important;
+		}
+	}
+	.decoration-2{
+		height: 600px;
+		width: 600px;
+		top: 5%;
+		left: 60%;
+		@include opacity(0.4)
+	}
+	.decoration-3{
+		height: 1000px;
+		width: 1000px;
+		top: -2%;
+		left: 40%;
+		@include opacity(0.1)
+	}
+	.row-home{
+		margin-top: 200px;
+		@include responsive(s2){
+			margin-top: 100px;
+		}
+		h1{
+			margin-bottom: 40px;
+		}
+		p{
+			margin-bottom: 40px;
+		}
+		button{
+			margin-bottom: 40px;
+		}
+	}
 }

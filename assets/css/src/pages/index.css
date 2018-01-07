@@ -1,0 +1,121 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 12px; } }
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 11px; } }
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 10px; } }
+
+.button {
+  height: 70px;
+  width: 200px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: #FFF;
+  padding: 0px;
+  font-size: 1.1em;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transform: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+  .button:hover {
+    background-color: #FFF;
+    color: #BE9B47; }
+  @media only screen and (max-width: 992px) {
+    .button {
+      height: 60px;
+      width: 180px;
+      margin-left: 50%;
+      -webkit-transform: translatex(-90px) !important;
+      -moz-transform: translatex(-90px) !important;
+      -ms-transform: translatex(-90px) !important;
+      transform: translatex(-90px) !important; } }
+
+.bgs, #home {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-position: top center;
+  background-size: cover; }
+
+.title-big-white {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2em;
+  color: #FFF; }
+
+.p-yellow-light {
+  font-family: "Open Sans", sans-serif;
+  color: #F6E8C7;
+  font-size: 1.2em; }
+
+.diagonal-bottom:after {
+  position: absolute;
+  content: '';
+  border-style: solid;
+  border-width: 0 0 10em 100vw;
+  border-color: transparent #ffffff #ffffff transparent;
+  bottom: 0; }
+  @media only screen and (max-width: 992px) {
+    .diagonal-bottom:after {
+      display: none !important; } }
+
+#home {
+  background: linear-gradient(rgba(190, 155, 71, 0.84), rgba(190, 155, 71, 0.84)), url("../../../images/hbs-cambio-bg-home.jpg");
+  height: 942px; }
+  @media only screen and (max-width: 992px) {
+    #home {
+      height: auto; } }
+  #home .decoration {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    left: 55%;
+    top: 33%;
+    filter: alpha(opacity=0.9);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+    background-image: url("../../../images/hbs-cambio-decoration-logo.svg");
+    background-repeat: no-repeat; }
+    @media only screen and (max-width: 992px) {
+      #home .decoration {
+        display: none !important; } }
+  #home .decoration-2 {
+    height: 600px;
+    width: 600px;
+    top: 5%;
+    left: 60%;
+    filter: alpha(opacity=0.4);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4; }
+  #home .decoration-3 {
+    height: 1000px;
+    width: 1000px;
+    top: -2%;
+    left: 40%;
+    filter: alpha(opacity=0.1);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1; }
+  #home .row-home {
+    margin-top: 200px; }
+    @media only screen and (max-width: 992px) {
+      #home .row-home {
+        margin-top: 100px; } }
+    #home .row-home h1 {
+      margin-bottom: 40px; }
+    #home .row-home p {
+      margin-bottom: 40px; }
+    #home .row-home button {
+      margin-bottom: 40px; }

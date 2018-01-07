@@ -1,0 +1,298 @@
+/// dctb-sass
+/// Sass Boilerplate to start new project with some functionalities.
+/// @author Diogo Cezar <diogo@diogocezar.com>
+
+// Menu
+// Set the project menu here
+
+ #header-menu{
+ 	.a-header{
+ 		position:relative;
+ 		float:left;
+ 		max-width: 190px;
+ 	}
+	position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 9999;
+    background-color: $color-white;
+    box-shadow: -2px -3px 20px 3px rgba(0, 0, 0, 0.11);
+    @include transition(.3s);
+	@include responsive(s4){
+		height: 60px;
+	}
+    header{
+    	height: 70px;
+    	position: relative;
+    	float: left;
+		@include responsive(s4) {
+			height: 60px;
+		}
+		#logo-hbs-cambio{
+			height: 50px;
+			margin-top: 11px;
+			@include responsive(s1) {
+				height: 40px;
+				margin-top: 17px;
+			}
+			@include responsive(s4) {
+				height: 35px;
+				margin-top: 15px;
+			}
+		}
+    }
+	.hamburguer{
+		width: 40px;
+		position: fixed;
+		@include transition(.25s);
+		top: 15px;
+		right: 15px;
+		height: 40px;
+	    background: transparent;
+	    border-radius: 0;
+	    border: 2px solid $color-gray;
+		display: block;
+		cursor: pointer;
+		@include responsive(s4) {
+			top: 10px;
+		}
+		&:after, &:before, span{
+			content: " ";
+			width: 22px;
+			height: 3px;
+			display: block;
+			background: $color-yellow;
+			border-radius: 0px;
+			@include transition(.25s);
+			margin-left: 7px;
+		}
+		&:before{
+			margin-top: 10px;
+		}
+		span{
+			position: relative;
+			margin-top: 4px;
+			margin-bottom: 4px;
+			@include transition(.25s);
+			&:after{
+				content: "MENU";
+				position: absolute;
+				font-size: 12px;
+				color: $color-gray;
+				font-weight: 600;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				top: -7px;
+				left: -60px;
+				font-family: $font-primary;
+				@include transition(.25s);
+			}
+		}
+		&.active{
+			&:after{
+				-webkit-transform: rotate(45deg) translate(-7px, -5px);
+				-moz-transform: rotate(45deg) translate(-7px, -5px);
+				-ms-transform: rotate(45deg) translate(-7px, -5px);
+				transform: rotate(45deg) translate(-5px, -5px);
+			}
+			&:before{
+				-webkit-transform: rotate(-45deg) translate(-5px, 4px);
+				-moz-transform: rotate(-45deg) translate(-5px, 4px);
+				-ms-transform: rotate(-45deg) translate(-5px, 4px);
+				transform: rotate(-45deg) translate(-5px, 4px);
+			}
+			span{
+				@include opacity(0);
+			}
+		}
+	}
+	.active{
+		.menu-container{
+			-webkit-transform: translate(0, 0)!important;
+			-moz-transform: translate(0, 0)!important;
+			-ms-transform: translate(0, 0)!important;
+			transform: translate(0, 0)!important;
+			@include opacity(0);
+			-webkit-transition: all 0.25s 'ease-in-out' 0s!important;
+			-moz-transform: all 0.25s 'ease-in-out' 0s!important;
+			-ms-transition: all 0.25s 'ease-in-out' 0s!important;
+			transition: all 0.25s 'ease-in-out' 0s!important;
+			ul{
+				top: calc( 50% - 35px);
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%) !important;
+				-moz-transform: translate(-50%, -50%) !important;
+				-ms-transform: translate(-50%, -50%) !important;
+				transform: translate(-50%, -50%) !important;
+				li{
+					width:100%;
+					margin-bottom: 2em;
+					a{
+						&:before{ display:none; }
+						font-size: 2.5em!important;
+						padding: 0.25em 0!important;
+						color: $color-gray;
+						font-weight: 600;
+						margin: 0px!important;
+						padding: 0px!important;
+						line-height: 1.5em!important;
+						letter-spacing: 1px!important;
+						font-weight: 600;
+						&:hover{
+							color: $color-yellow;
+						}
+						@media only screen and (max-height: 470px) {
+							font-size: 2em!important;
+						}
+						@media only screen and (max-height: 375px) {
+							font-size: 1.8em!important;
+						}
+						@media only screen and (max-height: 320px) {
+							font-size: 1.5em!important;
+						}
+					}
+				}
+				@include responsive(s4) {
+					top: calc(50% - 30px);
+				}
+			}
+		}
+	}
+	.end{
+		.menu-container{
+			ul{
+				top: calc( 50% - 35px);
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%) !important;
+				-moz-transform: translate(-50%, -50%) !important;
+				-ms-transform: translate(-50%, -50%) !important;
+				transform: translate(-50%, -50%) !important;
+				li{
+					width:100%;
+					a{
+						&:before{ display:none; }
+						font-size: 2.5em!important;
+						padding: 0.25em 0!important;
+						color: $color-gray;
+						font-weight: 600;
+						margin: 0px!important;
+						padding: 0px!important;
+						line-height: 1.5em!important;
+						letter-spacing: 1px!important;
+						font-weight: 600;
+						&:hover{
+							color: $color-yellow;
+						}
+						@media only screen and (max-height: 470px) {
+							font-size: 2em!important;
+						}
+						@media only screen and (max-height: 375px) {
+							font-size: 1.8em!important;
+						}
+						@media only screen and (max-height: 320px) {
+							font-size: 1.5em!important;
+						}
+					}
+				}
+				@include responsive(s4) {
+					top: calc(50% - 30px);
+				}
+			}
+		}
+	}
+    .bg-shared{
+		.menu-container{
+			position: relative;
+			float: right;
+			@include responsive(s2) {
+				width: auto!important;
+			}
+			ul{
+				margin:0;
+				padding:0;
+				@include relative;
+				li{
+					position: relative;
+					float: left;
+					list-style: none;
+					a{
+						text-decotaion:none;
+						position: relative;
+						display: block;
+						margin: 0 1.1em;
+						padding: 0.5em 0;
+						text-align: center;
+						font-weight: 500;
+						line-height: 40px;
+						font-size: 1.2em;
+						padding-top: 18px;
+						-webkit-transition: background 0.3s, color 0.3s;
+						transition: background 0.3s, color 0.3s;
+						text-transform: uppercase;
+						font-family: $font-primary;
+						color: $color-yellow;
+						font-weight: 600;
+						&:hover{
+							text-decoration: none;
+						}
+						&:before{
+							content: '';
+							position: absolute;
+							bottom: 10px;
+							left: 0;
+							width: 100%;
+							height: 3px;
+							background: $color-yellow-light;
+							-webkit-transform: scale3d(0, 5, 1);
+							transform: scale3d(0, 5, 1);
+							-webkit-transform-origin: 0% 50%;
+							transform-origin: 0% 50%;
+							-webkit-transition: -webkit-transform 0.3s;
+							transition: transform 0.3s;
+							-webkit-transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
+							transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
+						}
+						&:hover:before{
+							-webkit-transform: scale3d(1, 1, 1);
+							transform: scale3d(1, 1, 1);
+						}
+						@include responsive(s1) {
+    						font-size: 0.95em;
+    						margin: 0 1em;
+							line-height: 40px;
+							padding-top: 19px;
+						}
+					}
+				}
+			}
+			@include responsive(s2) {
+				-webkit-transform: translate(0, 110%);
+				-moz-transform: translate(0, 110%);
+				-ms-transform: translate(0, 110%);
+				transform: translate(0, 110%);
+				@include opacity(1);
+				@include transition(0.25s);
+				margin-top: 70px;
+				position: fixed;
+				height: 100vh;
+				width: 100%;
+				top:0;
+				left:0;
+				background-color: $color-gray-light;
+			}
+			@include responsive(s4) {
+				margin-top: 60px;
+			}
+		}
+    }
+	&.off{
+		transform: translate3d(0,-100px,0);
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&.on{
+		transform: translate3d(0,0px,0);
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
+	}
+ }

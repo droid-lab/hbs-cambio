@@ -1,63 +1,82 @@
 Index = {
-	Menu: {
-		init: function() {
-            $(".go-menu").on("click", function(e) {
-                e.preventDefault();
-                var o = $(this);
-                $("html, body").stop().animate({
-                    scrollTop: $(o.attr("href")).offset().top
-                }, 1e3, "easeOutQuart")
-            })
-        }
-	},
-	Carousels: {
-		configs: {
-			'default' : {
-				loop               : true,
-				nav                : true,
-				pagination         : true,
-				items              : 1,
-				dots               : true,
-				autoplay           : false,
-				autoplayTimeout    : 5000,
-				autoplayHoverPause : true,
-				singleItem         : true,
-				navText            : ["<i class='arrow-prev'></i>","<i class='arrow-next'></i>"]
-			},
-			'agendamobile' : {
-				loop               : true,
-				nav                : true,
-				pagination         : true,
-				dots               : true,
-				autoplay           : false,
-				autoplayTimeout    : 5000,
-				autoplayHoverPause : true,
-				singleItem         : true,
-				navText            : ["<i class='arrow-prev'></i>","<i class='arrow-next'></i>"],
-				responsive:{
-				    0 : {
-				        items:1
-				    },
-				    768: {
-				    	items: 2
-				    },
-				    1024 : {
-				        items:3
-				    },
-				    1200 : {
-				        items:4
-				    }
-				}
-			}
-		},
+	Menu : {
+        config: {
+            senseSpeed    : 5,
+            previusScroll : 0,
+            imediate      : 10,
+            openMenu      : false,
+        },
 		init: function(){
-			$('.carousel-default').owlCarousel(Index.Carousels.configs['default']);
-			$('.carrousel-agenda-mobile').owlCarousel(Index.Carousels.configs['agendamobile']);
+			Index.Menu.setDebounce();
+			Index.Menu.setHamburguer();
+			Index.Menu.setStart();
+		},
+		setDebounce: function(){
+			$(document).scroll(Index.Menu.debounce(function(){ Index.Menu.go() }, Index.Menu.config.imediate));
+		},
+		setStart: function(){
+			var scroller  = $(document).scrollTop();
+			var offsetImg = $(".bg-img").height() - ($(window).height() - 200);
+		},
+		setHamburguer: function(){
+			$(".hamburguer").on("click", function(e){
+				e.preventDefault();
+				$(this).toggleClass("active");
+				$(".menu-mobile").toggleClass("active");
+				setTimeout(function(){
+					$(".menu-mobile").toggleClass("end");
+				}, 500);
+				if($(".menu-translate").hasClass('active')){
+					$(".menu-translate").toggleClass("active");
+				}
+			});
+		},
+		debounce: function(func, wait, immediate) {
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if (!immediate) func.apply(context, args);
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if (callNow) func.apply(context, args);
+			};
+		},
+		go: function(){
+			var scroller  = $(document).scrollTop();
+			var offset    = $(window).height() * 1/6;
+			var offsetImg = $(".bg-img").height() - ($(window).height() - 200);
+            if (scroller - Index.Menu.config.senseSpeed >  Index.Menu.config.previousScroll && scroller > offset){
+            	$('#header-menu').addClass('off');
+            	$('#header-menu').removeClass('on');
+				if($(".menu-mobile").hasClass('active')){
+					$(".hamburguer").toggleClass("active");
+					$(".menu-mobile").toggleClass("active");
+					setTimeout(function(){
+						$(".menu-mobile").toggleClass("end");
+					}, 500);
+				}
+            }
+            else if (scroller + Index.Menu.config.senseSpeed < Index.Menu.config.previousScroll && scroller > offset){
+            	$('#header-menu').addClass('on');
+            	$('#header-menu').removeClass('off');
+            }
+            Index.Menu.config.previousScroll = scroller;
+		}
+	},
+	Stellar : {
+		init: function(){
+			$(window).stellar({
+				horizontalScrolling: false,
+			});
 		}
 	},
     init: function(){
     	Index.Menu.init();
-		Index.Carousels.init();
+    	Index.Stellar.init();
     }
 }
 
