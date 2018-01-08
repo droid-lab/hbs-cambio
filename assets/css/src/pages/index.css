@@ -15,15 +15,16 @@ html, body {
     font-size: 10px; } }
 
 .hbs-cambio-button {
-  height: 70px;
-  width: 200px;
+  height: 5rem;
+  width: 14.28rem;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   background-color: transparent;
   border: 2px solid #FFF;
   color: #FFF;
   padding: 0px;
-  font-size: 1.1em;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transform: all 0.25s ease-in-out 0s;
   -ms-transition: all 0.25s ease-in-out 0s;
@@ -33,22 +34,22 @@ html, body {
     color: #BE9B47; }
   @media only screen and (max-width: 992px) {
     .hbs-cambio-button {
-      height: 60px;
-      width: 180px;
+      height: 4.2rem;
+      width: 12.8rem;
       margin-left: 50%;
-      -webkit-transform: translatex(-90px) !important;
-      -moz-transform: translatex(-90px) !important;
-      -ms-transform: translatex(-90px) !important;
-      transform: translatex(-90px) !important; } }
+      -webkit-transform: translatex(-6.42rem) !important;
+      -moz-transform: translatex(-6.42rem) !important;
+      -ms-transform: translatex(-6.42rem) !important;
+      transform: translatex(-6.42rem) !important; } }
 
 .hbs-cambio-button-cta {
-  font-weight: 700;
-  font-size: 1em;
+  font-weight: 400;
+  font-size: 1.2em;
   margin-left: 50%;
-  -webkit-transform: translatex(-90px) !important;
-  -moz-transform: translatex(-90px) !important;
-  -ms-transform: translatex(-90px) !important;
-  transform: translatex(-90px) !important; }
+  -webkit-transform: translatex(-6.42em) !important;
+  -moz-transform: translatex(-6.42em) !important;
+  -ms-transform: translatex(-6.42em) !important;
+  transform: translatex(-6.42em) !important; }
 
 .bgs, #home, #cta-1, #cta-2 {
   position: relative;
@@ -80,7 +81,7 @@ html, body {
     content: '';
     position: absolute;
     bottom: 1em;
-    width: 110px;
+    width: 1.85em;
     height: 8px;
     background-color: #BE9B47;
     top: 1.3em;
@@ -128,7 +129,7 @@ html, body {
     content: '';
     position: absolute;
     bottom: 1em;
-    width: 110px;
+    width: 1.8em;
     height: 8px;
     background-color: #FFF;
     top: 3em;
@@ -150,10 +151,40 @@ html, body {
   text-align: center;
   padding: 0px 15%; }
 
+.title-black {
+  color: #000; }
+
 .img-decorative {
-  height: 175px;
-  width: 175px;
+  height: 12.5em;
+  width: 12.5em;
   margin-bottom: 2em; }
+
+label {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
+input, textarea {
+  border: 1px solid #000;
+  width: 100%;
+  height: 70px;
+  padding: 0 1em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transform: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+  input:focus, textarea:focus {
+    border-left-width: 5px; }
+
+textarea {
+  height: 140px;
+  padding-top: 1em;
+  resize: none; }
 
 .diagonal-bottom:after {
   position: absolute;
@@ -166,7 +197,7 @@ html, body {
     .diagonal-bottom:after {
       display: none !important; } }
 
-.default-section, #home, #sobre, #cta-1, #cta-2 {
+.default-section, #home, #sobre, #cta-1, #servicos, #trabalhe-conosco, #cta-2, #contato, footer {
   position: relative;
   float: left;
   width: 100%; }
@@ -179,8 +210,8 @@ html, body {
       height: auto; } }
   #home .decoration {
     position: absolute;
-    height: 300px;
-    width: 300px;
+    height: 21.42em;
+    width: 21.42em;
     left: 55%;
     top: 33%;
     filter: alpha(opacity=0.9);
@@ -193,8 +224,8 @@ html, body {
       #home .decoration {
         display: none !important; } }
   #home .decoration-2 {
-    height: 600px;
-    width: 600px;
+    height: 42.85em;
+    width: 42.85em;
     top: 5%;
     left: 60%;
     filter: alpha(opacity=0.4);
@@ -202,8 +233,8 @@ html, body {
     -khtml-opacity: 0.4;
     opacity: 0.4; }
   #home .decoration-3 {
-    height: 1000px;
-    width: 1000px;
+    height: 71.42em;
+    width: 71.42em;
     top: -2%;
     left: 40%;
     filter: alpha(opacity=0.1);
@@ -211,21 +242,22 @@ html, body {
     -khtml-opacity: 0.1;
     opacity: 0.1; }
   #home .row-home {
-    margin-top: 200px; }
+    margin-top: 14.28em; }
     @media only screen and (max-width: 992px) {
       #home .row-home {
-        margin-top: 100px; } }
+        margin-top: 7.14em; } }
     #home .row-home h1 {
-      margin-bottom: 40px; }
+      margin-bottom: 2.85rem; }
     #home .row-home p {
-      margin-bottom: 40px; }
+      margin-bottom: 2.85rem; }
     #home .row-home button {
-      margin-bottom: 40px; }
+      margin-bottom: 2.85rem; }
 
 #sobre {
-  margin-top: 30px; }
+  margin-top: 2.14em;
+  margin-bottom: 2.14em; }
   #sobre .row-missao-visao-valores {
-    margin-top: 90px; }
+    margin-top: 6.42em; }
     #sobre .row-missao-visao-valores .col-missao-visao-valores {
       border: 4px solid #F5F5F5;
       margin-left: 8px;
@@ -248,31 +280,155 @@ html, body {
         margin-bottom: 1.6em; }
 
 #cta-1 {
-  margin-top: 60px;
+  margin-top: 4.2em;
+  margin-bottom: 4.2em;
   background: linear-gradient(rgba(54, 49, 39, 0.84), rgba(54, 49, 39, 0.84)), url("../../../images/hbs-cambio-bg-cta-1.jpg");
   height: 550px; }
   @media only screen and (max-width: 992px) {
     #cta-1 {
       height: auto; } }
   #cta-1 .row-cta button {
-    margin-top: 30px;
+    margin-top: 2.1em;
     background-color: #FFF;
     color: #000; }
     #cta-1 .row-cta button:hover {
       background-color: transparent;
       color: #FFF; }
 
+#servicos {
+  margin-top: 0em;
+  margin-bottom: 4.2em; }
+  #servicos .row-services-title h1 {
+    margin-bottom: 1em; }
+  #servicos .row-services-title h2 {
+    margin-bottom: 1.7em; }
+  #servicos .row-services-items .image-service {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 10.71em;
+    background-size: cover !important;
+    margin-bottom: 2em; }
+  #servicos .row-services-items .box-service {
+    position: absolute;
+    width: 14.28em;
+    height: 2.5em;
+    background-color: #000;
+    bottom: -1em;
+    margin-left: 50%;
+    -webkit-transform: translatex(-7.14em) !important;
+    -moz-transform: translatex(-7.14em) !important;
+    -ms-transform: translatex(-7.14em) !important;
+    transform: translatex(-7.14em) !important; }
+    #servicos .row-services-items .box-service h1 {
+      font-family: "Poppins", sans-serif;
+      color: #FFF;
+      font-size: 1.1em;
+      line-height: 2.5em;
+      margin: 0em;
+      width: 100%;
+      text-align: center; }
+  #servicos .row-services-items .p-default {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 2em; }
+
+#trabalhe-conosco {
+  margin-top: 0em;
+  margin-bottom: 4.2em;
+  background-color: #F5F5F5; }
+  #trabalhe-conosco .row-work-here h1 {
+    color: #000;
+    font-size: 4em;
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    line-height: 1.3em; }
+    #trabalhe-conosco .row-work-here h1:after {
+      content: '';
+      position: absolute;
+      bottom: 1em;
+      width: 1.8em;
+      height: 8px;
+      background-color: #D5D5D5;
+      top: 1.6em;
+      float: left;
+      left: 5px;
+      margin-left: 50%;
+      transform: translatex(-50%); }
+  #trabalhe-conosco .row-work-here h2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
+    color: #A8A8A8;
+    margin-bottom: 2em;
+    line-height: 1.4em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px 15%; }
+  #trabalhe-conosco .row-work-here textarea, #trabalhe-conosco .row-work-here input {
+    background-color: #FCFCFC;
+    border-color: #AAA; }
+  #trabalhe-conosco .row-work-here button {
+    border: none;
+    background-color: #D5D5D5;
+    color: #000;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-left: 50%;
+    -webkit-transform: translatex(-6.42rem) !important;
+    -moz-transform: translatex(-6.42rem) !important;
+    -ms-transform: translatex(-6.42rem) !important;
+    transform: translatex(-6.42em) !important; }
+    #trabalhe-conosco .row-work-here button:hover {
+      background-color: transparent;
+      border: 1px solid black; }
+
 #cta-2 {
-  margin-top: 60px;
+  margin-top: 4.2em;
   background: linear-gradient(rgba(190, 155, 71, 0.84), rgba(190, 155, 71, 0.84)), url("../../../images/hbs-cambio-bg-cta-2.jpg");
   height: 550px; }
   @media only screen and (max-width: 992px) {
     #cta-2 {
       height: auto; } }
   #cta-2 .row-cta button {
-    margin-top: 30px;
+    margin-top: 2.1em;
     background-color: #FFF;
     color: #000; }
     #cta-2 .row-cta button:hover {
       background-color: transparent;
       color: #FFF; }
+
+#contato {
+  margin-top: 4rem; }
+  #contato .row-contact textarea, #contato .row-contact input {
+    background-color: #FFF;
+    border-color: #BE9B47; }
+  #contato .row-contact button {
+    border: none;
+    background-color: #BE9B47;
+    color: #FFF;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-weight: 700;
+    font-size: 1.2em; }
+    #contato .row-contact button:hover {
+      background-color: transparent;
+      border: 1px solid #BE9B47;
+      color: #BE9B47; }
+
+footer {
+  margin-top: 10em;
+  padding-top: 3em;
+  background-color: #BE9B47;
+  color: #FFF;
+  text-align: center; }

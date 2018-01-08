@@ -9,6 +9,10 @@
   outline: none;
 }
 
+html{
+	font-size: $size-base;
+}
+
 body{
   font-size: $size-base;
   font-family: $font-primary;

@@ -29,39 +29,40 @@ body{
 
 // Buttons
 .hbs-cambio-button{
-	height: 70px;
-	width: 200px;
+	height: 5rem;
+	width: 14.28rem;
 	text-transform: uppercase;
 	font-family: $font-secondary;
 	background-color: transparent;
 	border: 2px solid $color-white;
 	color: $color-white;
 	padding: 0px;
-	font-size: 1.1em;
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
 	@include transition(0.25s);
 	&:hover{
 		background-color: $color-white;
 		color: $color-yellow;
 	}
 	@include responsive(s2){
-		height: 60px;
-		width: 180px;
+		height: 4.2rem;
+		width: 12.8rem;
 		margin-left: 50%;
-		-webkit-transform: translatex(-90px)!important;
-		-moz-transform: translatex(-90px)!important;
-		-ms-transform: translatex(-90px)!important;
-		transform: translatex(-90px)!important;
+		-webkit-transform: translatex(-6.42rem)!important;
+		-moz-transform: translatex(-6.42rem)!important;
+		-ms-transform: translatex(-6.42rem)!important;
+		transform: translatex(-6.42rem)!important;
 	}
 }
 
 .hbs-cambio-button-cta{
-	font-weight: 700;
-	font-size: 1em;
+	font-weight: 400;
+	font-size: 1.2em;
 	margin-left: 50%;
-	-webkit-transform: translatex(-90px)!important;
-	-moz-transform: translatex(-90px)!important;
-	-ms-transform: translatex(-90px)!important;
-	transform: translatex(-90px)!important;
+	-webkit-transform: translatex(-6.42em)!important;
+	-moz-transform: translatex(-6.42em)!important;
+	-ms-transform: translatex(-6.42em)!important;
+	transform: translatex(-6.42em)!important;
 }
 
 //Default Background
@@ -99,7 +100,7 @@ body{
 		content: '';
 		position: absolute;
 		bottom: 1em;
-		width: 110px;
+		width: 1.85em;
 		height: 8px;
 		background-color: $color-yellow;
 		top: 1.3em;
@@ -152,7 +153,7 @@ body{
 		content: '';
 		position: absolute;
 		bottom: 1em;
-		width: 110px;
+		width: 1.8em;
 		height: 8px;
 		background-color: #FFF;
 		top: 3em;
@@ -177,10 +178,43 @@ body{
 	padding: 0px 15%;
 }
 
+.title-black{
+	color: $color-black;
+}
+
 .img-decorative{
-	height: 175px;
-	width: 175px;
+	height: 12.5em;
+	width: 12.5em;
 	margin-bottom: 2em;
+}
+
+// Forms
+label{
+	width: 100%;
+	font-family: $font-secondary;
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+input, textarea{
+	border: 1px solid $color-black;
+	width: 100%;
+	height: 70px;
+	padding: 0 1em;
+	font-size: 1em;
+	margin-bottom: 1em;
+	@include transition(0.25s)
+	&:focus{
+		border-left-width: 5px;
+	}
+}
+
+textarea{
+	height: 140px;
+	padding-top: 1em;
+	resize: none;
 }
 
 // Diagonal Section
@@ -218,8 +252,8 @@ body{
 	@extend .bgs;
 	.decoration{
 		position: absolute;
-		height: 300px;
-		width: 300px;
+		height: 21.42em;
+		width: 21.42em;
 		left: 55%;
 		top: 33%;
 		@include opacity(0.9)
@@ -230,41 +264,42 @@ body{
 		}
 	}
 	.decoration-2{
-		height: 600px;
-		width: 600px;
+		height: 42.85em;
+		width: 42.85em;
 		top: 5%;
 		left: 60%;
 		@include opacity(0.4)
 	}
 	.decoration-3{
-		height: 1000px;
-		width: 1000px;
+		height: 71.42em;
+		width: 71.42em;
 		top: -2%;
 		left: 40%;
 		@include opacity(0.1)
 	}
 	.row-home{
-		margin-top: 200px;
+		margin-top: 14.28em;
 		@include responsive(s2){
-			margin-top: 100px;
+			margin-top: 7.14em;
 		}
 		h1{
-			margin-bottom: 40px;
+			margin-bottom: 2.85rem;
 		}
 		p{
-			margin-bottom: 40px;
+			margin-bottom: 2.85rem;
 		}
 		button{
-			margin-bottom: 40px;
+			margin-bottom: 2.85rem;
 		}
 	}
 }
 
 #sobre{
 	@extend .default-section;
-	margin-top: 30px;
+	margin-top: 2.14em;
+	margin-bottom: 2.14em;
 	.row-missao-visao-valores{
-		margin-top: 90px;
+		margin-top: 6.42em;
 		.col-missao-visao-valores{
 			border: 4px solid $color-gray-light;
 			margin-left: 8px;
@@ -293,7 +328,8 @@ body{
 
 #cta-1{
 	@extend .default-section;
-	margin-top: 60px;
+	margin-top: 4.2em;
+	margin-bottom: 4.2em;
 	background:
 		linear-gradient(
 		rgba(54, 49, 39, 0.84),
@@ -307,7 +343,7 @@ body{
 	@extend .bgs;
 	.row-cta{
 		button{
-			margin-top: 30px;
+			margin-top: 2.1em;
 			background-color: $color-white;
 			color: $color-black;
 			&:hover{
@@ -318,9 +354,129 @@ body{
 	}
 }
 
+#servicos{
+	@extend .default-section;
+	margin-top: 0em;
+	margin-bottom: 4.2em;
+	.row-services-title{
+		h1{
+			margin-bottom: 1em;
+		}
+		h2{
+			margin-bottom: 1.7em;
+		}
+	}
+	.row-services-items{
+		.image-service{
+			position: relative;
+			float: left;
+			width: 100%;
+			height: 10.71em;
+			background-size: cover!important;
+			margin-bottom: 2em;
+		}
+		.box-service{
+			position: absolute;
+			width: 14.28em;
+			height: 2.5em;
+			background-color: $color-black;
+			bottom: -1em;
+			margin-left: 50%;
+			-webkit-transform: translatex(-7.14em)!important;
+			-moz-transform: translatex(-7.14em)!important;
+			-ms-transform: translatex(-7.14em)!important;
+			transform: translatex(-7.14em)!important;
+			h1{
+				font-family: $font-secondary;
+				color: $color-white;
+				font-size: 1.1em;
+				line-height: 2.5em;
+				margin: 0em;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.p-default{
+			text-align: center;
+			font-size: 0.9em;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+#trabalhe-conosco{
+	@extend .default-section;
+	margin-top: 0em;
+	margin-bottom: 4.2em;
+	background-color: $color-gray-light;
+	.row-work-here{
+		h1{
+			color: $color-black;
+			font-size: 4em;
+			position: relative;
+			float: left;
+			text-align: center;
+			width: 100%;
+			font-family: $font-secondary;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+			margin-top: 1em;
+			line-height: 1.3em;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 1em;
+				width: 1.8em;
+				height: 8px;
+				background-color: $color-gray-medium;
+				top: 1.6em;
+				float: left;
+				left: 5px;
+				margin-left: 50%;
+				transform: translatex(-50%);
+			}
+		}
+		h2{
+			position: relative;
+			float: left;
+			width: 100%;
+			font-family: $font-primary;
+			font-size: 2em;
+			color: $color-gray-medium-dark;
+			margin-bottom: 2em;
+			line-height: 1.4em;
+			font-weight: 600;
+			text-align: center;
+			padding: 0px 15%;
+		}
+		textarea, input{
+			background-color: $color-gray-very-light;
+			border-color: $color-gray-medium-light;
+		}
+		button{
+			border:none;
+			background-color: $color-gray-medium;
+			color: $color-black;
+			margin-top: 1em;
+			margin-bottom: 3em;
+			font-weight: 700;
+			font-size: 1.2em;
+			margin-left: 50%;
+			-webkit-transform: translatex(-6.42rem) !important;
+			-moz-transform: translatex(-6.42rem) !important;
+			-ms-transform: translatex(-6.42rem) !important;
+			transform: translatex(-6.42em) !important;
+			&:hover{
+				background-color: transparent;
+				border: 1px solid black;
+			}
+		}
+	}
+}
+
 #cta-2{
 	@extend .default-section;
-	margin-top: 60px;
+	margin-top: 4.2em;
 	background:
 		linear-gradient(
 		rgba(190, 155, 71, 0.84),
@@ -334,7 +490,7 @@ body{
 	@extend .bgs;
 	.row-cta{
 		button{
-			margin-top: 30px;
+			margin-top: 2.1em;
 			background-color: $color-white;
 			color: $color-black;
 			&:hover{
@@ -343,4 +499,38 @@ body{
 			}
 		}
 	}
+}
+
+#contato{
+	@extend .default-section;
+	margin-top: 4rem;
+	.row-contact{
+		textarea, input{
+			background-color: $color-white;
+			border-color: $color-yellow;
+		}
+		button{
+			border:none;
+			background-color: $color-yellow;
+			color: $color-white;
+			margin-top: 1em;
+			margin-bottom: 3em;
+			font-weight: 700;
+			font-size: 1.2em;
+			&:hover{
+				background-color: transparent;
+				border: 1px solid $color-yellow;
+				color: $color-yellow;
+			}
+		}
+	}
+}
+
+footer{
+	@extend .default-section;
+	margin-top: 10em;
+	padding-top: 3em;
+	background-color: $color-yellow;
+	color: $color-white;
+	text-align: center;
 }

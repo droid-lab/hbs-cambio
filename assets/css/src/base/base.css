@@ -284,6 +284,9 @@
 * {
   outline: none; }
 
+html {
+  font-size: 14px; }
+
 body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
