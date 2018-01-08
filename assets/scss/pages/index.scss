@@ -63,6 +63,9 @@ body{
 	-moz-transform: translatex(-6.42em)!important;
 	-ms-transform: translatex(-6.42em)!important;
 	transform: translatex(-6.42em)!important;
+	@include responsive(s2){
+		margin-bottom: 2em;
+	}
 }
 
 //Default Background
@@ -149,6 +152,10 @@ body{
 	margin-bottom: 1.6em;
 	margin-top: 2em;
 	line-height: 1.3em;
+	@include responsive(s2){
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
 	&:after{
 		content: '';
 		position: absolute;
@@ -161,6 +168,9 @@ body{
 		left: 5px;
 		margin-left: 50%;
 		transform: translatex(-50%);
+		@include responsive(s2){
+			display: none!important;
+		}
 	}
 }
 
@@ -176,6 +186,10 @@ body{
 	font-weight: 600;
 	text-align: center;
 	padding: 0px 15%;
+	@include responsive(s2){
+		margin-bottom: 0.2em;
+		margin-top: 0.2em;
+	}
 }
 
 .title-black{
@@ -199,6 +213,9 @@ label{
 }
 
 input, textarea{
+	font-family: $font-secondary;
+	font-size: 1.3rem!important;
+	font-weight: 400;
 	border: 1px solid $color-black;
 	width: 100%;
 	height: 70px;
@@ -284,9 +301,12 @@ textarea{
 		}
 		h1{
 			margin-bottom: 2.85rem;
+			@include responsive(s2){
+				margin-top: 2em;
+			}
 		}
 		p{
-			margin-bottom: 2.85rem;
+			margin-bottom: 4rem;
 		}
 		button{
 			margin-bottom: 2.85rem;
@@ -305,12 +325,22 @@ textarea{
 			margin-left: 8px;
 			margin-right: 8px;
 			width: calc(33.333% - 16px);
+			@include responsive(s2){
+				width: calc(100% - 16px);
+				margin-bottom: 5.5em;
+				border-width: 2px;
+			}
 			img{
 				position: absolute;
 				top: -50px;
 				right: 15px;
 				height: 100px;
 				width: 100px;
+				@include responsive(s2){
+					height: 60px;
+					width: 60px;
+					top: -30px;
+				}
 			}
 			h2{
 				color: $color-yellow;
@@ -329,7 +359,6 @@ textarea{
 #cta-1{
 	@extend .default-section;
 	margin-top: 4.2em;
-	margin-bottom: 4.2em;
 	background:
 		linear-gradient(
 		rgba(54, 49, 39, 0.84),
@@ -356,7 +385,7 @@ textarea{
 
 #servicos{
 	@extend .default-section;
-	margin-top: 0em;
+	margin-top: 4.2em;
 	margin-bottom: 4.2em;
 	.row-services-title{
 		h1{
@@ -501,6 +530,10 @@ textarea{
 	}
 }
 
+#sustentabilidade{
+	@extend .default-section;
+}
+
 #contato{
 	@extend .default-section;
 	margin-top: 4rem;
@@ -508,6 +541,7 @@ textarea{
 		textarea, input{
 			background-color: $color-white;
 			border-color: $color-yellow;
+			color: $color-brown;
 		}
 		button{
 			border:none;
@@ -528,9 +562,78 @@ textarea{
 
 footer{
 	@extend .default-section;
-	margin-top: 10em;
-	padding-top: 3em;
+	margin-top: 12rem;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
 	background-color: $color-yellow;
 	color: $color-white;
 	text-align: center;
+	font-size: 0.9rem;
+	.row-footer{
+		.decoration-circle{
+			height: 16rem;
+			width: 16rem;
+			background-color: #FFF;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: -14rem;
+			margin-left: 50%;
+			-webkit-transform: translatex(-9rem)!important;
+			-moz-transform: translatex(-9rem)!important;
+			-ms-transform: translatex(-9rem)!important;
+			transform: translatex(-9rem)!important;
+			@include responsive(s2){
+				height: 12rem;
+				width: 12rem;
+				top: -10rem;
+				transform: translatex(-7rem)!important;
+				img{
+					height: 70px;
+				}
+			}
+		}
+		.icon-decoration{
+			height: 35px;
+			width: 35px;
+			margin-bottom: 1.5rem;
+			margin-top: 1rem;
+		}
+		ul{
+			position: relative;
+			float: left;
+			width: 100%;
+			margin:0px;
+			margin-top: 5em;
+			margin-bottom: 3em;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 38%;
+			@include responsive(s2){
+				padding: 0 30%;
+			}
+			@include responsive(s3){
+				padding: 0 26%;
+			}
+			@include responsive(s4){
+				padding: 0 17%;
+			}
+			li{
+				list-style: none;
+				a{
+					img{
+						height: 40px;
+						width: 40px;
+						@include transition(0.25s);
+						&:hover{
+							@include scale(0.9);
+						}
+					}
+				}
+			}
+		}
+	}
 }
