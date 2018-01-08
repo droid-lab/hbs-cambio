@@ -14,7 +14,7 @@ html, body {
   body {
     font-size: 10px; } }
 
-.button {
+.hbs-cambio-button {
   height: 70px;
   width: 200px;
   text-transform: uppercase;
@@ -28,11 +28,11 @@ html, body {
   -moz-transform: all 0.25s ease-in-out 0s;
   -ms-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
-  .button:hover {
+  .hbs-cambio-button:hover {
     background-color: #FFF;
     color: #BE9B47; }
   @media only screen and (max-width: 992px) {
-    .button {
+    .hbs-cambio-button {
       height: 60px;
       width: 180px;
       margin-left: 50%;
@@ -41,7 +41,16 @@ html, body {
       -ms-transform: translatex(-90px) !important;
       transform: translatex(-90px) !important; } }
 
-.bgs, #home {
+.hbs-cambio-button-cta {
+  font-weight: 700;
+  font-size: 1em;
+  margin-left: 50%;
+  -webkit-transform: translatex(-90px) !important;
+  -moz-transform: translatex(-90px) !important;
+  -ms-transform: translatex(-90px) !important;
+  transform: translatex(-90px) !important; }
+
+.bgs, #home, #cta-1, #cta-2 {
   position: relative;
   float: left;
   width: 100%;
@@ -58,6 +67,94 @@ html, body {
   color: #F6E8C7;
   font-size: 1.2em; }
 
+.title-section {
+  color: #785E1F;
+  font-size: 4em;
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.6em; }
+  .title-section:after {
+    content: '';
+    position: absolute;
+    bottom: 1em;
+    width: 110px;
+    height: 8px;
+    background-color: #BE9B47;
+    top: 1.3em;
+    float: left;
+    left: 5px; }
+
+.title-h2 {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8em;
+  color: #BE9B47;
+  margin-bottom: 1.4em;
+  line-height: 1.4em; }
+
+.p-default {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: #000;
+  margin-bottom: 1.2em;
+  line-height: 1.4em;
+  font-weight: 600; }
+
+.title-h2-underline {
+  color: #785E1F;
+  text-decoration: underline; }
+
+.title-cta {
+  color: #FFF;
+  font-size: 3em;
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.6em;
+  margin-top: 2em;
+  line-height: 1.3em; }
+  .title-cta:after {
+    content: '';
+    position: absolute;
+    bottom: 1em;
+    width: 110px;
+    height: 8px;
+    background-color: #FFF;
+    top: 3em;
+    float: left;
+    left: 5px;
+    margin-left: 50%;
+    transform: translatex(-50%); }
+
+.sub-title-cta {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  color: #FFF;
+  margin-bottom: 1.2em;
+  line-height: 1.4em;
+  font-weight: 600;
+  text-align: center;
+  padding: 0px 15%; }
+
+.img-decorative {
+  height: 175px;
+  width: 175px;
+  margin-bottom: 2em; }
+
 .diagonal-bottom:after {
   position: absolute;
   content: '';
@@ -68,6 +165,11 @@ html, body {
   @media only screen and (max-width: 992px) {
     .diagonal-bottom:after {
       display: none !important; } }
+
+.default-section, #home, #sobre, #cta-1, #cta-2 {
+  position: relative;
+  float: left;
+  width: 100%; }
 
 #home {
   background: linear-gradient(rgba(190, 155, 71, 0.84), rgba(190, 155, 71, 0.84)), url("../../../images/hbs-cambio-bg-home.jpg");
@@ -119,3 +221,58 @@ html, body {
       margin-bottom: 40px; }
     #home .row-home button {
       margin-bottom: 40px; }
+
+#sobre {
+  margin-top: 30px; }
+  #sobre .row-missao-visao-valores {
+    margin-top: 90px; }
+    #sobre .row-missao-visao-valores .col-missao-visao-valores {
+      border: 4px solid #F5F5F5;
+      margin-left: 8px;
+      margin-right: 8px;
+      width: calc(33.333% - 16px); }
+      #sobre .row-missao-visao-valores .col-missao-visao-valores img {
+        position: absolute;
+        top: -50px;
+        right: 15px;
+        height: 100px;
+        width: 100px; }
+      #sobre .row-missao-visao-valores .col-missao-visao-valores h2 {
+        color: #BE9B47;
+        font-size: 2em;
+        position: relative;
+        float: left;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1.6em; }
+
+#cta-1 {
+  margin-top: 60px;
+  background: linear-gradient(rgba(54, 49, 39, 0.84), rgba(54, 49, 39, 0.84)), url("../../../images/hbs-cambio-bg-cta-1.jpg");
+  height: 550px; }
+  @media only screen and (max-width: 992px) {
+    #cta-1 {
+      height: auto; } }
+  #cta-1 .row-cta button {
+    margin-top: 30px;
+    background-color: #FFF;
+    color: #000; }
+    #cta-1 .row-cta button:hover {
+      background-color: transparent;
+      color: #FFF; }
+
+#cta-2 {
+  margin-top: 60px;
+  background: linear-gradient(rgba(190, 155, 71, 0.84), rgba(190, 155, 71, 0.84)), url("../../../images/hbs-cambio-bg-cta-2.jpg");
+  height: 550px; }
+  @media only screen and (max-width: 992px) {
+    #cta-2 {
+      height: auto; } }
+  #cta-2 .row-cta button {
+    margin-top: 30px;
+    background-color: #FFF;
+    color: #000; }
+    #cta-2 .row-cta button:hover {
+      background-color: transparent;
+      color: #FFF; }

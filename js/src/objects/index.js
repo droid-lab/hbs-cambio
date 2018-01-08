@@ -69,13 +69,16 @@ Index = {
 	},
 	Stellar : {
 		init: function(){
-			$(window).stellar({
-				horizontalScrolling: false,
-			});
+			if(!Mobile.isMobile){
+				$(window).stellar({
+					horizontalScrolling: false,
+				});
+			}
 		}
 	},
     init: function(){
     	Index.Menu.init();
+
     	Index.Stellar.init();
     }
 }

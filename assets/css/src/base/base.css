@@ -214,7 +214,7 @@
           font-weight: 500;
           line-height: 40px;
           font-size: 1.2em;
-          padding-top: 18px;
+          padding-top: 16px;
           -webkit-transition: background 0.3s, color 0.3s;
           transition: background 0.3s, color 0.3s;
           text-transform: uppercase;
@@ -385,12 +385,12 @@ p {
   align-items: center;
   height: 100vh; }
 
-.preload-img {
+.preloader-img {
   z-index: 99999;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .preload-img img {
+  .preloader-img img {
     height: 200px;
     width: 295px; }
