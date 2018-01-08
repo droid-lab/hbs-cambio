@@ -24,8 +24,8 @@
       #header-menu header {
         height: 60px; } }
     #header-menu header #logo-hbs-cambio {
-      height: 50px;
-      margin-top: 11px; }
+      height: 51px;
+      margin-top: 10px; }
       @media only screen and (max-width: 1200px) {
         #header-menu header #logo-hbs-cambio {
           height: 40px;
