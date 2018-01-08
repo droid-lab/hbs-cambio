@@ -79,7 +79,7 @@ Index = {
 				}
                 var o = $(this);
                 var plus = 30;
-                if(o.attr("href") === '#trabalhe-conosco'){
+                if(o.attr("href") === '#trabalhe-conosco'|| Mobile.isMobile){
                 	plus = 0;
                 }
                 $("html, body").stop().animate({

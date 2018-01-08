@@ -224,14 +224,13 @@
 						text-align: center;
 						font-weight: 500;
 						line-height: 40px;
-						font-size: 1.2em;
+						font-size: 1.25em;
 						padding-top: 16px;
 						-webkit-transition: background 0.3s, color 0.3s;
 						transition: background 0.3s, color 0.3s;
-						text-transform: uppercase;
-						font-family: $font-primary;
+						font-family: $font-secondary;
 						color: $color-yellow;
-						font-weight: 600;
+						font-weight: 400;
 						&:hover{
 							text-decoration: none;
 						}
@@ -261,6 +260,14 @@
     						margin: 0 1em;
 							line-height: 40px;
 							padding-top: 19px;
+						}
+						@include responsive(s2) {
+							font-size: 2.6rem!important;
+							font-weight: 400;
+						}
+						@include responsive(s4) {
+							font-size: 2rem!important;
+							font-weight: 400;
 						}
 					}
 				}
