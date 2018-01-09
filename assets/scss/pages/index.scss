@@ -77,6 +77,9 @@ body{
 	width: 100%;
 	background-position: top center;
 	background-size: cover;
+	@include responsive(s2){
+		background-attachment: scroll!important;
+	}
 }
 
 // Default Styles

@@ -62,6 +62,9 @@ html, body {
   width: 100%;
   background-position: top center;
   background-size: cover; }
+  @media only screen and (max-width: 992px) {
+    .bgs, #home, #cta-1, #cta-2 {
+      background-attachment: scroll !important; } }
 
 .title-big-white {
   font-family: "Poppins", sans-serif;
