@@ -65,8 +65,8 @@ html, body {
   @media only screen and (max-width: 992px) {
     .bgs, #home, #cta-1, #cta-2 {
       background-attachment: scroll !important;
-      background-repeat: no-repeat;
-      background-position: center center; } }
+      background-repeat: no-repeat !important;
+      background-position: center center !important; } }
 
 .title-big-white {
   font-family: "Poppins", sans-serif;

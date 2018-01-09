@@ -79,8 +79,8 @@ body{
 	background-size: cover;
 	@include responsive(s2){
 		background-attachment: scroll!important;
-		background-repeat: no-repeat;
-		background-position: center center;
+		background-repeat: no-repeat!important;
+		background-position: center center!important;
 	}
 }
 
